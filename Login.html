@@ -1,0 +1,104 @@
+<html>
+   <head>
+         <title>JavaScript functions </title>
+      </head>    
+      <style>
+         body{
+            background-image: url("img3.jpg");
+            background-size: cover;
+         }
+         body{
+            background-color:rgb(145, 98, 37);
+        }
+        @media Screen and (min-width:550px){
+            body{
+                background-color:rgb(181, 101, 181);
+            }
+        }
+        @media Screen and (min-width:1200px){
+            body{
+                background-color: aquamarine;}
+        }
+         h1{
+            color:black;
+         }
+         .container{
+    width: 450px;
+    height:350px;
+    margin: 20px auto;
+ }
+ .glass{
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-shadow:0.8px 32px 0 rgba(0,0,0,0.37);
+}
+         .box{
+    padding:12px;
+    margin:20px;
+    width:35%;
+    border:none;
+    outline:none;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: inset -3px -3px rgba(0,0,0,0.5);
+    color: white;
+    font-size: 1rem;
+}
+#submit{
+    padding: 10px 20px;
+    margin-top: 25px;
+    width:100px;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: inset -3px -3px rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    outline:none;
+    border-radius:20px;
+    font-size: 1rem;
+}
+#submit:hover{
+    cursor:pointer;
+    background-color: rgba(255,255,255,0.1);
+    color: rgb(255, 253, 253);
+}
+::placeholder{
+    color: white;
+    opacity: 0.7;
+}
+
+      </style>  
+      <script>
+         // User Validations
+ function loginValidation() {
+             // Ramesh
+   var uname = document.myform.username.value;
+              //Ramesh@123
+   var password = document.myform.password.value;
+             if(uname==null || uname=="") {
+               alert("Name cant be blank")
+               return false;  
+            } else if (password.length<6){
+               alert("Password Must be 6 letters")
+               return false;
+            }  
+            return true                 
+         }           
+      </script>
+      </head>
+      <body>
+         <center>
+       
+<form name="myform" action="LoginSuccess.html" 	onsubmit="return loginValidation(this)">
+ <div class="container glass">
+   <h1>Login Page</h1>  
+<input type="text" name="username" class="box" placeholder="Enter Name"> <br>
+<input type="password" name="password" class="box" placeholder="Enter Password"> <br>
+         <input type="submit" value="Submit" id="submit"> 
+ </div>    
+</center>
+           </form>
+   </body>
+</html>
